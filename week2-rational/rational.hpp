@@ -67,8 +67,14 @@ public:
    friend std::ostream & operator<<( std::ostream & lhs, const rational & rhs ){
       return lhs
          << "["
+         << std::hex
+         << std::showbase
+         << std::setw(4)
+         << std::setfill('0')
          << rhs.counter
          << "/"
+         << std::setw(4)
+         << std::setfill('0')
          << rhs.denominator
          << "]";
    }
